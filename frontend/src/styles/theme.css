@@ -1,0 +1,511 @@
+/* ==========================================
+   ENTERPRISE AI FORECASTING THEME
+========================================== */
+
+:root {
+
+  /* ==========================
+     PRIMARY COLORS
+  ========================== */
+
+  --primary: #7c3aed;
+  --primary-light: #9333ea;
+  --primary-dark: #6d28d9;
+
+  --secondary: #a855f7;
+  --accent: #c084fc;
+
+  /* ==========================
+     BACKGROUND COLORS
+  ========================== */
+
+  --bg-primary: #070b16;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #131b2e;
+
+  --surface: #161f38;
+  --surface-hover: #1b2542;
+
+  /* ==========================
+     TEXT COLORS
+  ========================== */
+
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* ==========================
+     STATUS COLORS
+  ========================== */
+
+  --success: #10b981;
+  --success-bg: rgba(16,185,129,.15);
+
+  --warning: #f59e0b;
+  --warning-bg: rgba(245,158,11,.15);
+
+  --danger: #ef4444;
+  --danger-bg: rgba(239,68,68,.15);
+
+  --info: #38bdf8;
+  --info-bg: rgba(56,189,248,.15);
+
+  /* ==========================
+     BORDER COLORS
+  ========================== */
+
+  --border: rgba(255,255,255,.08);
+  --border-light: rgba(255,255,255,.04);
+
+  /* ==========================
+     SHADOWS
+  ========================== */
+
+  --shadow-sm:
+    0 4px 12px rgba(0,0,0,.15);
+
+  --shadow-md:
+    0 8px 24px rgba(0,0,0,.25);
+
+  --shadow-lg:
+    0 20px 50px rgba(0,0,0,.35);
+
+  --shadow-purple:
+    0 10px 40px rgba(124,58,237,.25);
+
+  /* ==========================
+     GLASS EFFECT
+  ========================== */
+
+  --glass-bg:
+    rgba(255,255,255,.04);
+
+  --glass-border:
+    rgba(255,255,255,.08);
+
+  --glass-blur: blur(18px);
+
+  /* ==========================
+     GRADIENTS
+  ========================== */
+
+  --gradient-primary:
+    linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+  --gradient-card:
+    linear-gradient(
+      135deg,
+      rgba(124,58,237,.15),
+      rgba(147,51,234,.05)
+    );
+
+  --gradient-dashboard:
+    linear-gradient(
+      135deg,
+      #070b16,
+      #0f172a,
+      #131b2e
+    );
+
+  --gradient-success:
+    linear-gradient(
+      135deg,
+      #10b981,
+      #34d399
+    );
+
+  --gradient-danger:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #f87171
+    );
+
+  /* ==========================
+     BORDER RADIUS
+  ========================== */
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 30px;
+
+  /* ==========================
+     TRANSITIONS
+  ========================== */
+
+  --transition-fast: .2s ease;
+  --transition-normal: .3s ease;
+  --transition-slow: .5s ease;
+
+  /* ==========================
+     SIDEBAR
+  ========================== */
+
+  --sidebar-width: 280px;
+  --sidebar-collapsed: 90px;
+
+  /* ==========================
+     NAVBAR
+  ========================== */
+
+  --navbar-height: 80px;
+
+  /* ==========================
+     Z INDEX
+  ========================== */
+
+  --z-sidebar: 1000;
+  --z-navbar: 1100;
+  --z-modal: 2000;
+  --z-toast: 3000;
+}
+
+/* ==========================================
+   DARK THEME
+========================================== */
+
+[data-theme="dark"] {
+
+  --bg-primary: #070b16;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #131b2e;
+
+  --surface: #161f38;
+
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+}
+
+/* ==========================================
+   LIGHT THEME
+========================================== */
+
+[data-theme="light"] {
+
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+
+  --surface: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  --border: rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glass-card {
+
+  background: var(--glass-bg);
+
+  border:
+    1px solid var(--glass-border);
+
+  backdrop-filter:
+    var(--glass-blur);
+
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-md);
+
+  transition:
+    var(--transition-normal);
+}
+
+.glass-card:hover {
+
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    var(--shadow-lg);
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-btn {
+
+  background:
+    var(--gradient-primary);
+
+  color: white;
+
+  border: none;
+
+  padding:
+    12px 22px;
+
+  border-radius:
+    var(--radius-md);
+
+  font-weight: 600;
+
+  transition:
+    var(--transition-normal);
+
+  box-shadow:
+    var(--shadow-purple);
+}
+
+.primary-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  opacity: .95;
+}
+
+.secondary-btn {
+
+  background:
+    rgba(255,255,255,.05);
+
+  border:
+    1px solid var(--border);
+
+  color:
+    var(--text-primary);
+
+  padding:
+    12px 20px;
+
+  border-radius:
+    var(--radius-md);
+
+  transition:
+    var(--transition-normal);
+}
+
+.secondary-btn:hover {
+
+  background:
+    rgba(255,255,255,.08);
+}
+
+/* ==========================================
+   STATUS BADGES
+========================================== */
+
+.status-success {
+
+  color:
+    var(--success);
+
+  background:
+    var(--success-bg);
+
+  padding:
+    6px 12px;
+
+  border-radius:
+    999px;
+
+  font-size: 12px;
+}
+
+.status-warning {
+
+  color:
+    var(--warning);
+
+  background:
+    var(--warning-bg);
+
+  padding:
+    6px 12px;
+
+  border-radius:
+    999px;
+
+  font-size: 12px;
+}
+
+.status-danger {
+
+  color:
+    var(--danger);
+
+  background:
+    var(--danger-bg);
+
+  padding:
+    6px 12px;
+
+  border-radius:
+    999px;
+
+  font-size: 12px;
+}
+
+/* ==========================================
+   SCROLLBAR THEME
+========================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+
+  background:
+    var(--primary);
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background:
+    var(--primary-light);
+}
+
+/* ==========================================
+   DASHBOARD BACKGROUND
+========================================== */
+
+.app {
+
+  background:
+    var(--gradient-dashboard);
+
+  min-height: 100vh;
+
+  color:
+    var(--text-primary);
+}
+
+/* ==========================================
+   CARD HEADER
+========================================== */
+
+.card-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+
+  color:
+    var(--text-primary);
+
+  font-weight: 600;
+}
+
+/* ==========================================
+   KPI CARD
+========================================== */
+
+.stat-card {
+
+  background:
+    var(--gradient-card);
+
+  border:
+    1px solid var(--border);
+
+  border-radius:
+    var(--radius-lg);
+
+  padding: 24px;
+
+  transition:
+    var(--transition-normal);
+}
+
+.stat-card:hover {
+
+  transform:
+    translateY(-5px);
+
+  box-shadow:
+    var(--shadow-purple);
+}
+
+/* ==========================================
+   TABLE BUTTON
+========================================== */
+
+.table-btn {
+
+  border: none;
+
+  padding:
+    8px 14px;
+
+  border-radius:
+    var(--radius-sm);
+
+  background:
+    var(--primary);
+
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    var(--transition-normal);
+}
+
+.table-btn:hover {
+
+  opacity: .9;
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+input,
+select,
+textarea {
+
+  background:
+    rgba(255,255,255,.04);
+
+  border:
+    1px solid var(--border);
+
+  color:
+    var(--text-primary);
+
+  border-radius:
+    var(--radius-md);
+
+  padding:
+    12px 16px;
+
+  transition:
+    var(--transition-normal);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+  outline: none;
+
+  border-color:
+    var(--primary);
+
+  box-shadow:
+    0 0 0 3px
+    rgba(124,58,237,.15);
+}
